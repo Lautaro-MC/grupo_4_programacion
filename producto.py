@@ -1,31 +1,22 @@
 class producto:
     def __init__(self, nombre, precio):
-        while True:
-            if precio <= 0:
+            while precio <= 0:
                 print("El precio no es valido")
-            else:
-                self.nombre = nombre
-                self.precio = precio
+                precio = float(input("ingrese un precio valido"))
+            self.nombre = nombre
+            self.precio = precio
 
 
 
 class bebida(producto):
     def __init__(self, tamano_L, nombre, precio):
-        while True:
-            if precio <= 0:
-                print("El precio no es valido")
-            else:
-                super().__init__(nombre, precio)
-                self.tamano_L = tamano_L
+            super().__init__(nombre, precio)
+            self.tamano_L = tamano_L
 
 
 
 class comida(producto):
-    def __init__(self, guarnicion, nombre, precio, para_compartir = False):
-        while True:   
-            if precio <= 0:
-                print("El precio no es valido")
-            else:
-                super().__init__(nombre, precio)
-                self.guarnicion = guarnicion
-
+    def __init__(self, nombre, precio, guarnicion, para_compartir): 
+            super().__init__(nombre, precio)
+            self.guarnicion = guarnicion
+            self.para_compartir = para_compartir
