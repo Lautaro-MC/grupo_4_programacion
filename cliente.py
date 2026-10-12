@@ -6,10 +6,11 @@ class cliente:
     def __init__(self, nombre, mesa):
         self.nombre = nombre
         self.mesa = mesa
-        self.pedido = pedido()
+        self.pedido = None
 
-    def tomar_pedido(self, producto):
-        self.pedido.agregar_producto(producto)
+    def tomar_pedido(self, num_pedidio):
+        self.pedido = pedido(num_pedidio)
+        print(f"se creo el pedido {num_pedidio} para la mesa {self.mesa}")
 
     def calcular_pago(self):
         total = 0
