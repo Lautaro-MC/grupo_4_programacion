@@ -26,7 +26,7 @@ class pedido:
 
     def mostrar_pedido(self):
         print("========================")
-        print("        PEDIDO")
+        print(f"        PEDIDO {self.num_pedido}")
         print("========================")
 
         if not self.productos:
