@@ -18,16 +18,16 @@ class pedido:
 
     def sacar_producto(self, producto):
         if producto not in self.productos:
-            print(f"el producto {producto} no estaba en el pedido")
+            print(f"el producto {producto.nombre} no estaba en el pedido")
         else:
             self.productos.remove(producto)
             print(f"el producto {producto.nombre} se ha eliminado del pedido")
 
 
     def mostrar_pedido(self):
-        print("========================")
+        print("=========================")
         print(f"        PEDIDO {self.num_pedido}")
-        print("========================")
+        print("=========================")
 
         if not self.productos:
             print("El pedido está vacío")
@@ -35,5 +35,5 @@ class pedido:
             for producto in self.productos:
                 print(f"- {producto.nombre}")
 
-        print("========================")
+        print("=========================")
 
